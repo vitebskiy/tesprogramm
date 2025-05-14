@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -55,144 +56,148 @@
       <div class="block">
         <h2>Программа</h2>
 
-       <div class="swiper">
-  <div class="swiper-wrapper">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-header general">
+                <div class="card-title">Выезд на мероприятие</div>
+                <div class="card-time">08:30</div>
+              </div>
+              <div class="card-body">Отъезд участников на корпоративном транспорте.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header general">
+                <div class="card-title">Сбор гостей и кофе-брейк</div>
+                <div class="card-time">09:00 – 10:00</div>
+              </div>
+              <div class="card-body">Сбор гостей. Кофе-брейк в шатре.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header general">
+                <div class="card-title">Торжественное открытие</div>
+                <div class="card-time">10:00 – 10:30</div>
+              </div>
+              <div class="card-body">Официальная часть.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header team">
+                <div class="card-title">Тимбилдинг: «Игра большого роста»</div>
+                <div class="card-time">10:30 – 13:00</div>
+              </div>
+              <div class="card-body">Командные игры на свежем воздухе.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header general">
+                <div class="card-title">Обед</div>
+                <div class="card-time">13:00 – 14:30</div>
+              </div>
+              <div class="card-body">Обед в большом шатре.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header sports">
+                <div class="card-title">Турниры и мастер-классы</div>
+                <div class="card-time">14:00 – 16:00</div>
+              </div>
+              <div class="card-body">Футбол, волейбол, активности, мастер-классы.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header general">
+                <div class="card-title">Награждение</div>
+                <div class="card-time">16:00 – 16:30</div>
+              </div>
+              <div class="card-body">Подведение итогов, награждение победителей.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header general">
+                <div class="card-title">Начало банкета</div>
+                <div class="card-time">16:30 – 17:00</div>
+              </div>
+              <div class="card-body">Сбор гостей. Кавер-группа «Молния».</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header show">
+                <div class="card-title">Мюзикл: «Мечта, изменившая мир»</div>
+                <div class="card-time">17:00 – 18:00</div>
+              </div>
+              <div class="card-body">Театрализованное шоу.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header music">
+                <div class="card-title">2 выступление кавер-группы</div>
+                <div class="card-time">18:00 – 18:30</div>
+              </div>
+              <div class="card-body">Группа «Молния».</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header interactive">
+                <div class="card-title">Интерактив от ведущего</div>
+                <div class="card-time">18:30 – 19:00</div>
+              </div>
+              <div class="card-body">Игры и активности.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header music">
+                <div class="card-title">3 выступление кавер-группы</div>
+                <div class="card-time">19:00 – 19:30</div>
+              </div>
+              <div class="card-body">Группа «Молния».</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header party">
+                <div class="card-title">Дискотека</div>
+                <div class="card-time">19:30 – 20:00</div>
+              </div>
+              <div class="card-body">Танцы под открытым небом.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header general">
+                <div class="card-title">Окончание мероприятия</div>
+                <div class="card-time">20:00</div>
+              </div>
+              <div class="card-body">Финальные слова и завершение.</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-header general">
+                <div class="card-title">Отъезд</div>
+                <div class="card-time">20:15</div>
+              </div>
+              <div class="card-body">Возвращение участников домой.</div>
+            </div>
+          </div>
+          <!-- Pagination dots -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
 
-    <div class="swiper-slide">
-      <div class="card-header general">
-        <div class="card-title">Выезд на мероприятие</div>
-        <div class="card-time">08:30</div>
-      </div>
-      <div class="card-body">Отъезд участников на корпоративном транспорте.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header general">
-        <div class="card-title">Сбор гостей и кофе-брейк</div>
-        <div class="card-time">09:00 – 10:00</div>
-      </div>
-      <div class="card-body">Сбор гостей. Кофе-брейк в шатре.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header general">
-        <div class="card-title">Торжественное открытие</div>
-        <div class="card-time">10:00 – 10:30</div>
-      </div>
-      <div class="card-body">Официальная часть.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header team">
-        <div class="card-title">Тимбилдинг: «Игра большого роста»</div>
-        <div class="card-time">10:30 – 13:00</div>
-      </div>
-      <div class="card-body">Командные игры на свежем воздухе.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header general">
-        <div class="card-title">Обед</div>
-        <div class="card-time">13:00 – 14:30</div>
-      </div>
-      <div class="card-body">Обед в большом шатре.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header sports">
-        <div class="card-title">Турниры и мастер-классы</div>
-        <div class="card-time">14:00 – 16:00</div>
-      </div>
-      <div class="card-body">Футбол, волейбол, активности, мастер-классы.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header general">
-        <div class="card-title">Награждение</div>
-        <div class="card-time">16:00 – 16:30</div>
-      </div>
-      <div class="card-body">Подведение итогов, награждение победителей.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header general">
-        <div class="card-title">Начало банкета</div>
-        <div class="card-time">16:30 – 17:00</div>
-      </div>
-      <div class="card-body">Сбор гостей. Кавер-группа «Молния».</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header show">
-        <div class="card-title">Мюзикл: «Мечта, изменившая мир»</div>
-        <div class="card-time">17:00 – 18:00</div>
-      </div>
-      <div class="card-body">Театрализованное шоу.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header music">
-        <div class="card-title">2 выступление кавер-группы</div>
-        <div class="card-time">18:00 – 18:30</div>
-      </div>
-      <div class="card-body">Группа «Молния».</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header interactive">
-        <div class="card-title">Интерактив от ведущего</div>
-        <div class="card-time">18:30 – 19:00</div>
-      </div>
-      <div class="card-body">Игры и активности.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header music">
-        <div class="card-title">3 выступление кавер-группы</div>
-        <div class="card-time">19:00 – 19:30</div>
-      </div>
-      <div class="card-body">Группа «Молния».</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header party">
-        <div class="card-title">Дискотека</div>
-        <div class="card-time">19:30 – 20:00</div>
-      </div>
-      <div class="card-body">Танцы под открытым небом.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header general">
-        <div class="card-title">Окончание мероприятия</div>
-        <div class="card-time">20:00</div>
-      </div>
-      <div class="card-body">Финальные слова и завершение.</div>
-    </div>
-    <div class="swiper-slide">
-      <div class="card-header general">
-        <div class="card-title">Отъезд</div>
-        <div class="card-time">20:15</div>
-      </div>
-      <div class="card-body">Возвращение участников домой.</div>
-    </div>
+    <div class="container">
+      <div class="block">
+        <h2>Программа 2</h2>
 
-  </div>
-  <!-- Pagination dots -->
-  <div class="swiper-pagination"></div>
-</div>
-        
+        <div id="calendar"></div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper', {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    centeredSlides: false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2.2,
-      },
-      1024: {
-        slidesPerView: 2.2,
-      },
-    }
-  });
-</script>
-
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        centeredSlides: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2.2,
+          },
+          1024: {
+            slidesPerView: 2.2,
+          },
+        },
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -213,6 +218,16 @@
 
 <style>
   /* style.css */
+
+  #calendar {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    overflow: hidden;
+  }
 
   body {
     margin: 0;
@@ -268,56 +283,69 @@
   .block__img:hover {
     transform: scale(1.02);
   }
-  
-   .swiper {
-      padding: 32px 0;
-    }
 
-    .swiper-slide {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-      width: 260px;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+  .swiper {
+    padding: 32px 0;
+  }
 
-    .card-header {
-      padding: 16px;
-      border-left: 5px solid #2196f3;
-    }
+  .swiper-slide {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    width: 260px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-    .card-header.sports { border-left-color: #4caf50; }
-    .card-header.show { border-left-color: #ff9800; }
-    .card-header.music { border-left-color: #673ab7; }
-    .card-header.team { border-left-color: #9c27b0; }
-    .card-header.party { border-left-color: #e91e63; }
-    .card-header.general { border-left-color: #2196f3; }
-    .card-header.interactive { border-left-color: #03a9f4; }
+  .card-header {
+    padding: 16px;
+    border-left: 5px solid #2196f3;
+  }
 
-    .card-title {
-      font-weight: 600;
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
+  .card-header.sports {
+    border-left-color: #4caf50;
+  }
+  .card-header.show {
+    border-left-color: #ff9800;
+  }
+  .card-header.music {
+    border-left-color: #673ab7;
+  }
+  .card-header.team {
+    border-left-color: #9c27b0;
+  }
+  .card-header.party {
+    border-left-color: #e91e63;
+  }
+  .card-header.general {
+    border-left-color: #2196f3;
+  }
+  .card-header.interactive {
+    border-left-color: #03a9f4;
+  }
 
-    .card-time {
-      font-size: 13px;
-      color: #888;
-    }
+  .card-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
 
-    .card-body {
-      padding: 0 16px 16px;
-      font-size: 14px;
-      color: #555;
-    }
+  .card-time {
+    font-size: 13px;
+    color: #888;
+  }
 
-    .swiper-pagination {
-      bottom: 8px !important;
-    }
+  .card-body {
+    padding: 0 16px 16px;
+    font-size: 14px;
+    color: #555;
+  }
 
+  .swiper-pagination {
+    bottom: 8px !important;
+  }
 </style>
 
 <script>
@@ -335,5 +363,51 @@
 
     // скрыть все time по умолчанию (чтобы работал аккордеон)
     document.querySelectorAll(".event .time").forEach((t) => (t.style.display = "none"));
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const calendarEl = document.getElementById("calendar");
+    const isMobile = window.innerWidth < 600;
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      slotMinTime: "08:00:00",
+      slotMaxTime: "21:00:00",
+      slotDuration: isMobile ? "00:30:00" : "00:15:00",
+      height: "auto",
+      locale: "ru",
+      slotLabelFormat: {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      },
+      initialDate: "2025-05-30",
+      initialView: "timeGridDay",
+      allDaySlot: false,
+      headerToolbar: {
+        left: "",
+        center: "title",
+        right: "",
+      },
+      events: [
+        { title: "Выезд на мероприятие", start: "2025-05-30T08:30:00", end: "2025-05-30T09:00:00", color: "#2196f3" },
+        { title: "Сбор гостей и кофе-брейк", start: "2025-05-30T09:00:00", end: "2025-05-30T10:00:00", color: "#2196f3" },
+        { title: "Торжественное открытие", start: "2025-05-30T10:00:00", end: "2025-05-30T10:30:00", color: "#2196f3" },
+        { title: "Тимбилдинг", start: "2025-05-30T10:30:00", end: "2025-05-30T13:00:00", color: "#9c27b0" },
+        { title: "Обед", start: "2025-05-30T13:00:00", end: "2025-05-30T14:30:00", color: "#2196f3" },
+        { title: "Турниры и мастер-классы", start: "2025-05-30T14:00:00", end: "2025-05-30T16:00:00", color: "#4caf50" },
+        { title: "Награждение", start: "2025-05-30T16:00:00", end: "2025-05-30T16:30:00", color: "#2196f3" },
+        { title: "Начало банкета", start: "2025-05-30T16:30:00", end: "2025-05-30T17:00:00", color: "#2196f3" },
+        { title: "Мюзикл", start: "2025-05-30T17:00:00", end: "2025-05-30T18:00:00", color: "#ff9800" },
+        { title: "2 выступление кавер-группы", start: "2025-05-30T18:00:00", end: "2025-05-30T18:30:00", color: "#673ab7" },
+        { title: "Интерактив от ведущего", start: "2025-05-30T18:30:00", end: "2025-05-30T19:00:00", color: "#03a9f4" },
+        { title: "3 выступление кавер-группы", start: "2025-05-30T19:00:00", end: "2025-05-30T19:30:00", color: "#673ab7" },
+        { title: "Дискотека", start: "2025-05-30T19:30:00", end: "2025-05-30T20:00:00", color: "#e91e63" },
+        { title: "Окончание мероприятия", start: "2025-05-30T20:00:00", end: "2025-05-30T20:15:00", color: "#2196f3" },
+        { title: "Отъезд", start: "2025-05-30T20:15:00", end: "2025-05-30T20:30:00", color: "#2196f3" },
+      ],
+    });
+    calendar.render();
   });
 </script>
