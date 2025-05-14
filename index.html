@@ -171,7 +171,7 @@
     </div>
 
     <div class="container">
-      <div class="block" style="min-height: 500px;">
+      <div class="block" style="min-height: 500px">
         <h2>Программа 2</h2>
 
         <div id="calendar"></div>
@@ -224,7 +224,8 @@
     margin: 30px auto;
     background: #ffffff;
     border-radius: 16px;
-    height: 100% !important;
+    max-height: 600px;
+    overflow-y: auto;
     overflow: hidden;
   }
 
@@ -281,9 +282,9 @@
   }
 
   .block__link {
-	display: block;
-	margin-bottom: 20px;
-}
+    display: block;
+    margin-bottom: 20px;
+  }
 
   .block__img:hover {
     transform: scale(1.02);
@@ -353,42 +354,40 @@
   }
 
   /* Увеличим шрифт событий */
-.fc .fc-event-title,
-.fc .fc-event-time {
-  font-size: 15px !important;
-  line-height: 1.5;
-  white-space: normal !important;
-}
+  .fc .fc-event-title,
+  .fc .fc-event-time {
+    font-size: 15px !important;
+    line-height: 1.5;
+    white-space: normal !important;
+  }
 
-/* Добавим отступы внутри события */
-.fc-event {
-  padding: 6px 8px !important;
-  border-radius: 8px !important;
-}
+  /* Добавим отступы внутри события */
+  .fc-event {
+    padding: 6px 8px !important;
+    border-radius: 8px !important;
+  }
 
-/* Чуть увеличим высоту строки */
-.fc-timegrid-event .fc-event-main {
-  display: flex;
-  flex-direction: column;
-}
+  /* Чуть увеличим высоту строки */
+  .fc-timegrid-event .fc-event-main {
+    display: flex;
+    flex-direction: column;
+  }
 
+  #calendar {
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    height: 100%;
+  }
 
-#calendar {
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 12px;
-      height: 100%;
-    }
+  .fc-list-event-time {
+    font-weight: bold;
+    color: #555;
+  }
 
-    .fc-list-event-time {
-      font-weight: bold;
-      color: #555;
-    }
-
-    .fc-list-event-title {
-      font-size: 15px;
-    }
-
+  .fc-list-event-title {
+    font-size: 15px;
+  }
 </style>
 
 <script>
@@ -411,37 +410,39 @@
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-      const calendarEl = document.getElementById('calendar');
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        locale: 'ru',
-        initialView: 'listDay',
-        initialDate: '2025-05-30',
-        headerToolbar: false,
-        events: [
-          { title: 'Выезд на мероприятие', start: '2025-05-30T08:30:00', end: '2025-05-30T09:00:00', color: '#2196f3', description: 'Трансфер от офиса до места проведения мероприятия' },
-          { title: 'Сбор гостей и кофе-брейк', start: '2025-05-30T09:00:00', end: '2025-05-30T10:00:00', color: '#2196f3', description: 'Приветствие участников и лёгкий перекус' },
-          { title: 'Торжественное открытие', start: '2025-05-30T10:00:00', end: '2025-05-30T10:30:00', color: '#2196f3', description: 'Официальное открытие фестиваля' },
-          { title: 'Тимбилдинг', start: '2025-05-30T10:30:00', end: '2025-05-30T13:00:00', color: '#9c27b0', description: 'Командные игры на свежем воздухе' },
-          { title: 'Обед', start: '2025-05-30T13:00:00', end: '2025-05-30T14:30:00', color: '#2196f3', description: 'Обед в общем шатре' },
-          { title: 'Турниры и мастер-классы', start: '2025-05-30T14:00:00', end: '2025-05-30T16:00:00', color: '#4caf50', description: 'Футбол, волейбол, творческие мастер-классы' },
-          { title: 'Награждение', start: '2025-05-30T16:00:00', end: '2025-05-30T16:30:00', color: '#2196f3', description: 'Награждение победителей командных соревнований' },
-          { title: 'Начало банкета', start: '2025-05-30T16:30:00', end: '2025-05-30T17:00:00', color: '#2196f3', description: 'Подготовка к музыкальной части и банкету' },
-          { title: 'Мюзикл', start: '2025-05-30T17:00:00', end: '2025-05-30T18:00:00', color: '#ff9800', description: 'Показ авторского мюзикла "Мечта, изменившая мир"' },
-          { title: '2 выступление кавер-группы', start: '2025-05-30T18:00:00', end: '2025-05-30T18:30:00', color: '#673ab7', description: 'Живое исполнение популярных песен' },
-          { title: 'Интерактив от ведущего', start: '2025-05-30T18:30:00', end: '2025-05-30T19:00:00', color: '#03a9f4', description: 'Интерактивные конкурсы для всех гостей' },
-          { title: '3 выступление кавер-группы', start: '2025-05-30T19:00:00', end: '2025-05-30T19:30:00', color: '#673ab7', description: 'Продолжение музыкальной программы' },
-          { title: 'Дискотека', start: '2025-05-30T19:30:00', end: '2025-05-30T20:00:00', color: '#e91e63', description: 'Танцы под открытым небом' },
-          { title: 'Окончание мероприятия', start: '2025-05-30T20:00:00', end: '2025-05-30T20:15:00', color: '#2196f3', description: 'Закрытие фестиваля' },
-          { title: 'Отъезд', start: '2025-05-30T20:15:00', end: '2025-05-30T20:30:00', color: '#2196f3', description: 'Трансфер до офиса' }
-        ]
-      });
-
-      calendar.on('eventClick', function(info) {
-        const desc = info.event.extendedProps.description || 'Описание отсутствует';
-        alert(info.event.title + "\n\n" + desc);
-      });
-
-      calendar.render();
+  document.addEventListener("DOMContentLoaded", function () {
+    const calendarEl = document.getElementById("calendar");
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      locale: "ru",
+      initialView: "listDay",
+      initialDate: "2025-05-30",
+      headerToolbar: false,
+      contentHeight: "auto", // адаптируется под контент
+      expandRows: true, // растягивает строки, если нужно
+      events: [
+        { title: "Выезд на мероприятие", start: "2025-05-30T08:30:00", end: "2025-05-30T09:00:00", color: "#2196f3", description: "Трансфер от офиса до места проведения мероприятия" },
+        { title: "Сбор гостей и кофе-брейк", start: "2025-05-30T09:00:00", end: "2025-05-30T10:00:00", color: "#2196f3", description: "Приветствие участников и лёгкий перекус" },
+        { title: "Торжественное открытие", start: "2025-05-30T10:00:00", end: "2025-05-30T10:30:00", color: "#2196f3", description: "Официальное открытие фестиваля" },
+        { title: "Тимбилдинг", start: "2025-05-30T10:30:00", end: "2025-05-30T13:00:00", color: "#9c27b0", description: "Командные игры на свежем воздухе" },
+        { title: "Обед", start: "2025-05-30T13:00:00", end: "2025-05-30T14:30:00", color: "#2196f3", description: "Обед в общем шатре" },
+        { title: "Турниры и мастер-классы", start: "2025-05-30T14:00:00", end: "2025-05-30T16:00:00", color: "#4caf50", description: "Футбол, волейбол, творческие мастер-классы" },
+        { title: "Награждение", start: "2025-05-30T16:00:00", end: "2025-05-30T16:30:00", color: "#2196f3", description: "Награждение победителей командных соревнований" },
+        { title: "Начало банкета", start: "2025-05-30T16:30:00", end: "2025-05-30T17:00:00", color: "#2196f3", description: "Подготовка к музыкальной части и банкету" },
+        { title: "Мюзикл", start: "2025-05-30T17:00:00", end: "2025-05-30T18:00:00", color: "#ff9800", description: 'Показ авторского мюзикла "Мечта, изменившая мир"' },
+        { title: "2 выступление кавер-группы", start: "2025-05-30T18:00:00", end: "2025-05-30T18:30:00", color: "#673ab7", description: "Живое исполнение популярных песен" },
+        { title: "Интерактив от ведущего", start: "2025-05-30T18:30:00", end: "2025-05-30T19:00:00", color: "#03a9f4", description: "Интерактивные конкурсы для всех гостей" },
+        { title: "3 выступление кавер-группы", start: "2025-05-30T19:00:00", end: "2025-05-30T19:30:00", color: "#673ab7", description: "Продолжение музыкальной программы" },
+        { title: "Дискотека", start: "2025-05-30T19:30:00", end: "2025-05-30T20:00:00", color: "#e91e63", description: "Танцы под открытым небом" },
+        { title: "Окончание мероприятия", start: "2025-05-30T20:00:00", end: "2025-05-30T20:15:00", color: "#2196f3", description: "Закрытие фестиваля" },
+        { title: "Отъезд", start: "2025-05-30T20:15:00", end: "2025-05-30T20:30:00", color: "#2196f3", description: "Трансфер до офиса" },
+      ],
     });
+
+    calendar.on("eventClick", function (info) {
+      const desc = info.event.extendedProps.description || "Описание отсутствует";
+      alert(info.event.title + "\n\n" + desc);
+    });
+
+    calendar.render();
+  });
 </script>
