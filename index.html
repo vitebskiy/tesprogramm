@@ -37,10 +37,12 @@
         </p>
 
         <div style="margin-top: 20px">
+      <div class="map-wrapper" onclick="enableMap(this)">
+      <div class="map-overlay">Нажмите, чтобы активировать карту</div>
       <iframe
-      src="https://yandex.ru/map-widget/v1/?ll=37.575162%2C56.121744&z=15&pt=37.575162,56.121744,pm2rdm"
-      width="100%" height="350" frameborder="0" allowfullscreen>
-    </iframe>
+        src="https://yandex.ru/map-widget/v1/?ll=37.575162%2C56.121744&z=15&pt=37.575162,56.121744,pm2rdm"
+        width="100%" height="350" frameborder="0" allowfullscreen></iframe>
+    </div>
     </div>
       </div>
     </div>
@@ -462,6 +464,28 @@
   .fc-list-day-cushion {
   display: none !important;
 }
+
+.map-wrapper {
+  position: relative;
+  pointer-events: none;
+}
+.map-wrapper iframe {
+  pointer-events: none;
+}
+.map-wrapper.active {
+  pointer-events: auto;
+}
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 2;
+  cursor: pointer;
+}
+
 </style>
 
 <script>
